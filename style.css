@@ -1,0 +1,168 @@
+body{
+    text-align: center;
+    scroll-behavior: smooth;
+    background: #dfdfdf;
+    color: rgb(0, 0, 0);
+    margin:0;
+    font-family: arial;
+}
+
+
+dialog{
+    border-radius: 20px;
+}
+
+#provale{
+    font-size: 2em;
+    text-transform: uppercase;
+}
+#logo{
+    padding:10px;
+    height:300px;
+    width:300px;
+    z-index: -1;
+}
+
+.container{
+    display:grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.gallery{
+    transform-style: preserve-3d;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: grid;
+    animation: r 15s linear infinite;
+}
+
+.gallery > img{
+    grid-area: 1/1;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: rotate(var(--_a)) translateY(120%) rotateX(90deg);
+}
+
+.gallery > img:nth-child(1) {--_a: 0deg}
+.gallery > img:nth-child(2) {--_a: 60deg}
+.gallery > img:nth-child(3) {--_a: 120deg}
+.gallery > img:nth-child(4) {--_a: 180deg}
+.gallery > img:nth-child(5) {--_a: 240deg}
+.gallery > img:nth-child(6) {--_a: 300deg}
+
+
+
+#frutta{
+    filter: blur(1px);
+    height: 90vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#gommosa{
+    font-size:2rem;
+    text-transform: uppercase;
+    color: orangered;
+}
+
+#tropicale{
+    font-size:1.5rem;
+    text-transform: uppercase;
+    color: rgb(255, 136, 0);
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    padding-right: 70px;
+    padding-left: 10px;
+    background:white;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index:1;
+}
+
+nav img{
+    height: 70px;
+}
+
+ul{
+    display:flex;
+    align-items: center;
+    gap:20px;
+    margin:0;
+}
+
+
+nav a{
+    color:rgb(38, 38, 150);
+    text-decoration: none;
+}
+
+nav a:hover{
+    background: rgb(34, 34, 134);
+    color:white;
+}
+
+section{
+    padding:100px 0;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:10px;
+    position: fixed;
+    bottom: 0px;
+    padding:10px 20px;
+    background: white;
+    width:100%;
+    color:black;
+}
+button{
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+
+#spotify{
+    font-size: 2em;
+}
+
+#logoAidap{
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+#logoAidap img{
+    height: 20px;
+}
+
+@keyframes r {
+    0% {transform: perspective(450px) rotateX(-100deg) rotate(0deg)}
+    to {transform: perspective(450px) rotateX(-100deg) rotate(-360deg)}
+}
+
+#descrizione{
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px){
+    #spoofydescription{
+        display:none;
+    }
+
+    #aidapdescription{
+        display:none;
+    }
+    .gallery > img{
+        grid-area: 1/1;
+        width: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+        transform: rotate(var(--_a)) translateY(120%) rotateX(90deg);
+    }
+}
