@@ -39,26 +39,50 @@
                     gli adulti che per i bambini.
                 </p>
             </div>
+            <div class="vincita">
+            <fieldset>
+                <legend>hai trovato una caramella verde?</legend>
+                <form action="">
+                    <div>
+                        <input type="text" id ="nome">
+                        <label for="nome">nome</label>
+                    </div>
+                    <div>
+                        <input type="text" id ="cognome">
+                        <label for="cognome">cognome</label>
+                    </div>
+                    <div>
+                        <input type="email" id ="email">
+                        <label for="email">email</label>
+                    </div>
+                    <div>
+                        <button>send</button>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
         </section>
+        
         <footer>
             <div class="containerspotify">
                 <button onclick="spoofy.showModal()"><i id = "spotify" class="fa-brands fa-spotify"></i><p id ="spoofydescription">vinci un abbonamento spotify</p></button>
                 <dialog id ="spoofy" >
                     <form method="dialog">
-                        <h1>Vinci un abbonamento spotify</h1>
+                        <button class="close" onclick="spoofy.close()"><i class="fa-solid fa-xmark"></i></button>
+                        <h2>Vinci un abbonamento spotify</h2>
                         <p>Ci saranno 10 abbonamenti di spotify a disposizione per i 10 clienti fortunati che troveranno la caramella verde al gusto cocco</p>
                         </form>
-                        <button onclick="spoofy.close()">chiudi</button>
+                        
                 </dialog>
             </div>
             <div id="logoAidap">
                 <button onclick="aidap.showModal()"><img src="data:image/png;base64,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" alt=""><p id="aidapdescription">vuoi saperne di più?</p></button>
-                    <dialog id ="aidap">
+                    <dialog id = "aidap">
                         <form method="dialog">
-                            <h1>associazione italiana disturbi dell'alimentazione e del peso</h1>
+                            <button class = "close" onclick="aidap.close()"><i class="fa-solid fa-xmark"></i></button>
+                            <h2>associazione italiana disturbi dell'alimentazione e del peso</h2>
                             <p>Se compri uno dei nostri prodotti in store o online, aiuti la galbusera a sostenere l'AIDAP ad aiutare chi soffre di disturbi alimentari</p>
                             </form>
-                            <button onclick="aidap.close()">chiudi</button>
                     </dialog>
             </div>
         </footer>
